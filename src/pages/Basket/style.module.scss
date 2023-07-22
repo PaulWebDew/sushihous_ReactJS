@@ -1,0 +1,217 @@
+@import '../../styles/global.scss';
+
+.basket_wrapper{
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.basket{
+   @include adaptive-font(24,10);
+   width: 90%;
+   margin: 0 auto;
+   background-color: #000000;
+   border: 1px solid rgba($mainColor, 0.7);
+   border-radius: 10px;
+   color: $secondColor;
+   img{
+      width: 15rem;
+      margin: 0 1rem;
+   }
+}
+
+.basket_header{
+   color: $secondColor;
+   margin: 0 50px;
+   font-weight:600;
+   @include adaptive-font(32,18);
+}
+
+.basket_item{
+   display: flex;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.basket_item__card{
+   display: flex;
+   align-items: center;
+}
+
+.card_info{
+   align-items: center;
+}
+
+.info_count{
+   opacity: 0.6;
+   @include adaptive-font(14,10);
+   margin-top: 0.5rem;
+}
+
+.basket_item__count{
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   justify-content: space-around;
+   button{
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      svg{
+         stroke: rgba($mainColor, 0.7);
+         width: 2rem;
+         height: 2rem;
+         transition: all 0.2s ease-in-out;
+         -webkit-transition:all 0.2s ease-in-out;
+         -o-transition:all 0.2s ease-in-out;
+         -moz-transition:all 0.2s ease-in-out;
+         &:hover{
+            stroke: rgba($mainColor, 1);
+         }
+      }
+      &:active{
+         svg{
+            stroke: $secondColor;
+         }
+      }
+   }
+}
+
+
+.basket_item__delete{
+   margin-right: 15px;
+   width: 1.5rem;
+   cursor: pointer;
+   svg{
+      fill: $secondColor;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition:all 0.2s ease-in-out;
+      -o-transition:all 0.2s ease-in-out;
+      -moz-transition:all 0.2s ease-in-out;
+      &:hover{
+         fill: $mainColor;
+      }
+   }
+
+   &:active{
+      svg{
+         fill: $secondColor;
+      }
+   }
+}
+
+.total{
+   flex: 1;
+   display: flex;
+   justify-content: space-around;
+   color: $secondColor;
+   span{
+      margin: 0 5px;
+      color: rgba($mainColor, 0.8);
+   }
+}
+
+
+
+.basket_footer{
+   @include adaptive-font(24,11);
+   display: flex;
+   justify-content: space-between;
+   width: 90%;
+   margin: 2rem auto;
+   align-items: center;
+   button{
+      margin: 0 1rem;
+      cursor: pointer;
+      border: 1px solid rgba($mainColor, 0.7);
+      outline: none;
+      background-color: rgba($alterColor, 0.7);
+      color: $secondColor;
+      border-radius: 10px;
+      padding: 5px 10px;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition:all 0.2s ease-in-out;
+      -o-transition:all 0.2s ease-in-out;
+      -moz-transition:all 0.2s ease-in-out;
+      &:hover{
+         background-color: rgba($alterColor, 1);
+         color: $mainColor;
+         a{
+            color: $mainColor;
+         }
+         &:active{
+            background-color: $alterColor2;
+            color: $secondColor;
+         }
+      }
+      a{
+         text-decoration: none;
+         color: $secondColor;
+         transition: all 0.2s ease-in-out;
+         -webkit-transition:all 0.2s ease-in-out;
+         -o-transition:all 0.2s ease-in-out;
+         -moz-transition:all 0.2s ease-in-out;
+      }
+   }
+}
+
+.freeBasket{
+   margin:2rem 5rem;
+   border-radius: 20px;
+   background-image: url('../../assets/images/pngwing.com.png');
+   background-color: rgba($secondColor, 0.7);
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   min-height: 50vh;
+   color: $secondColor;
+   text-align: center;
+   position: relative;
+   @include adaptive-font(24,11);
+   p{
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: translateX(-50%);
+      line-height: 1.5;
+   }
+   a{
+      text-decoration: none;
+      color: inherit;
+      &:hover{
+         color: #f5db66;
+      }
+   }
+
+}
+
+
+@media(max-width:800px){
+   .basket{
+      margin-top: 1rem;
+   img{
+      width: 10rem !important;
+   }
+   }
+   .freeBasket{
+margin: 1rem;
+   }
+}
+
+@media (max-width:450px){
+   .total{
+   flex-direction: column;
+}
+.total>div{
+   margin: 0.2rem auto;
+}
+.basket_footer{
+   button{
+      @include adaptive-font(24,11);
+   }
+}
+}

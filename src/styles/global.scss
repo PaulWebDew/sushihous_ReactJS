@@ -1,0 +1,21 @@
+// ======================adaptive fontsize===================================
+$maxWidth: 1920;// - layout's max width
+// $pcSize - fotnt size from design for desctop
+// $mobSize -foxt size from design for mobile(320px)
+@mixin adaptive-font($pcSize, $mobSize){
+ $addSize: $pcSize - $mobSize;
+ $curWidth: $maxWidth - 320;
+ font-size: calc(#{$mobSize + px} + #{$addSize}*(100vw - 320px)/#{$curWidth});
+}
+
+// h1{
+//    font-weigt: 900;
+//    @include adaptive-font(40,24);
+// }
+
+// -----------------------------------------------------------------------------
+
+$mainColor: #ffbe16;
+$secondColor: #fdf9f9;
+$alterColor:#353232;
+$alterColor2:#696262;

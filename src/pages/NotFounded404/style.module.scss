@@ -1,0 +1,25 @@
+@import '../../styles/global.scss';
+.notFounded{
+   background-image: url('../../assets/images/404.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 45%;
+   margin: 0 auto;
+   height: 60vh;
+   background-color: $alterColor;
+   position: relative;
+}
+
+.link{
+   text-align: center;
+   @include adaptive-font(22,8);
+   font-weight: bold;
+   position: absolute;
+   color: $secondColor;
+   cursor: pointer;
+   text-decoration: none;
+   margin-left: 50%;
+   bottom: 10%;
+   transform: translateX(-50%);
+}

@@ -1,0 +1,176 @@
+@import '../../styles/global.scss';
+
+.search_icon{
+   margin: 10px 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   svg{
+      margin:0 auto;
+      width: 20px;
+      fill: $secondColor;
+      cursor: pointer;
+      margin: auto 4px;
+   }
+   &::before,&::after{
+      content: '';
+      display: inline-block;
+      width: calc((100% - 40px)/2);
+      height: 1px;
+      background-color: rgba($secondColor,0.5);
+   }
+}
+
+.search_icon.active{
+   svg{
+      fill:$mainColor;
+   }
+}
+
+.wrapper{
+   position: relative;
+   width: 100%;
+   height: 2.5rem;
+   overflow: hidden;
+}
+
+.search_field{
+   width: 90%;
+   display: block;
+   margin-left: 5%;
+   position: absolute;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: rgb(32, 31, 31);
+   padding: 5px;
+   border-radius: 1rem;
+   transform: translateY(-100%);
+   pointer-events: none;
+   transition: all 0.3s ease-in-out;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -moz-transition:all 0.3s ease-in-out;
+}
+
+.search_field.activeSearch_field{
+   transform: translateY(0);
+   pointer-events: all;
+}
+
+.search_field__input{
+   margin:0 auto;
+   display: block;
+  min-width: 50%;
+   border-radius: 1rem;
+   border: 1px solid transparent;
+   outline: 1px solid  transparent;
+   background-color: $alterColor;
+   color: $secondColor;
+   transition: 0.3s;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -moz-transition:all 0.3s ease-in-out;
+   height: 1.5rem;
+   padding: 0px 10px;
+   &:focus{
+      outline: 1px solid $mainColor;
+   }
+}
+
+.search_field__button{
+   position: absolute;
+   top: 6px;
+   right: 25%;
+   height: 1.5rem;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   display: flex;
+   align-items: center;
+   transition: 0.3s;
+   -webkit-transition:all 0.3s ease-in-out;
+   -o-transition:all 0.3s ease-in-out;
+   -moz-transition:all 0.3s ease-in-out;
+   svg{
+      width: 0.9rem;
+      fill: $secondColor;
+      cursor: pointer;
+      opacity: 0.6;
+      &:hover{
+         fill: $mainColor;
+         opacity: 0.8;
+      }
+   }
+
+}
+
+.listWrapper{
+   width: 60%;
+}
+
+.category_list{
+   flex: 1;
+   display: flex;
+   justify-content: space-between;
+   font-weight: 300;
+   margin-right: 10px;
+   @include adaptive-font(12,6);
+   li{
+      line-height: 1.2rem;
+      padding: 0 10px;
+      margin:0 0.5rem;
+      height: 1.2rem;
+      border-radius: 1rem;
+      background-color: $alterColor;
+      color: rgba($secondColor, 0.7);
+      cursor: pointer;
+      transition:0.3s;
+      -webkit-transition:all 0.3s ease-in-out;
+      -o-transition:all 0.3s ease-in-out;
+      -moz-transition:all 0.3s ease-in-out;
+      &:hover{
+         background-color: $alterColor2;
+         color: $mainColor;
+      }
+
+}}
+
+li.active{
+   background-color: $mainColor;
+   color: rgba(black, 1);
+   font-weight: normal;
+}
+
+@media (max-width: 800px){
+   .category_list{
+      overflow-x: scroll;
+      &::-webkit-scrollbar{
+         width: 0;
+         height: 0;
+      }
+   }
+}
+
+@media (max-width:400px){
+   .wrapper{
+      height: 3rem;
+   }
+   .search_field{
+      flex-direction: column;
+   }
+   .search_field__button{
+      bottom: 5px;
+      top: auto;
+   }
+   .search_field__input{
+      width: 90%;
+      margin-top: 5px;
+   }
+   .listWrapper{
+      width: 100%;
+   }
+   .category_list{
+      width: 90%;
+   }
+}

@@ -1,0 +1,97 @@
+@import '../../styles/global.scss';
+
+.productCard{
+   background-size: cover;
+   background-position: center;
+   padding: 4rem 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+
+
+.productCard_wrap{
+   margin: 30px auto auto auto;
+   max-width:450px;
+   border-radius: 1rem;
+   padding: 1.5rem 2rem;
+   background-color: rgba(black, 0.7);
+   color: $secondColor;
+   border: 2px solid $mainColor;
+}
+
+.productCard_info{
+width: 100%;
+padding: 1rem;
+box-sizing: border-box;
+}
+
+.productCard_img{
+   width: 100%;
+   img{width: 100%;}
+}
+.productCard_info__title{
+   font-weight: bold;
+   margin:0.7rem 0;
+}
+.productCard_info__weight{
+   @include adaptive-font(14,8);
+   color: rgba($secondColor, 0.7);
+   font-weight: 300;
+   margin-bottom: 1rem;
+}
+
+.productCard_info__price{
+   margin-top: 30px;
+   @include adaptive-font(28,14);
+   font-weight: bold;
+}
+
+.product_button{
+   margin: 0 10px 0 auto;
+   height: 2rem;
+   background-color: $secondColor;
+   border-radius: 15px;
+   border: none;
+   outline: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.3s;
+   @include adaptive-font(16,8);
+   cursor: pointer;
+      svg{width: 70%;
+          fill: rgba(0, 0, 0, 0.8);}
+   &:hover{
+   background-color: $mainColor;
+   }
+}
+
+.btn_back{
+   cursor: pointer;
+   background: linear-gradient(90deg,
+   rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.5) 10%,
+    rgba(255,255,255,0.5) 90%,
+     rgba(255,255,255,0) 100%);
+border: none;
+outline: none;
+color: rgba($mainColor, 0.7);
+font-weight: bold;
+font-size: 20px;
+margin: 10px auto;
+width: 30%;
+& a{
+   text-decoration: none;
+   color: inherit;
+}
+&:hover{
+   color:$mainColor;
+   background: linear-gradient(90deg,
+   rgba(255,255,255,0.1) 0%,
+    rgba(255,255,255,0.7) 10%,
+    rgba(255,255,255,0.7) 90%,
+     rgba(255,255,255,0.1) 100%);
+}
+}

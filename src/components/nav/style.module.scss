@@ -1,0 +1,79 @@
+@import '../../styles/global.scss';
+
+.nav{
+   display: flex;
+   width: 90%;
+   margin: 0 5%;
+   background-color: #0f0f0f;
+   height: 2rem;
+   position: absolute;
+   transform: translateY(-100%);
+   transition:0.2s;
+   -webkit-transition:all 0.2s ease-in-out;
+   -o-transition:all 0.2s ease-in-out;
+   -moz-transition:all 0.2s ease-in-out;
+
+}
+
+.nav_list{
+   width: 70%;
+   margin: 5px auto;
+   display: flex;
+   justify-content: space-around;
+   color: $secondColor;
+   font-weight: bold;
+   @include adaptive-font(22,10);
+   li{
+   cursor: pointer;
+   transition: all 0.2s ease-in-out;
+   -webkit-transition:all 0.2s ease-in-out;
+   -o-transition:all 0.2s ease-in-out;
+   -moz-transition:all 0.2s ease-in-out;
+   &:hover{
+      color: rgba($mainColor, 0.8);
+   }}
+}
+
+.nav.activeSearch{
+   transform: translateY(0);
+}
+
+.sorter{
+   display: flex;
+   flex-wrap: nowrap;
+   color: $secondColor;
+   @include adaptive-font(14,10);
+   label{
+      margin-right: 5px;
+      display: inline-block;
+      line-height: 1.5rem;
+   }
+    select{
+      cursor: pointer;
+      color: $secondColor;
+      background-color: $alterColor;
+      border: 1px solid rgba($secondColor, 0.7);
+      border-radius: 10px;
+      height: 1.5rem;
+      @include adaptive-font(14,10);
+      padding: 5px;
+      outline: none;
+      &:hover{
+         border: 1px solid rgba($mainColor, 0.8);
+}
+}}
+
+.activCategory{
+   color: $mainColor;
+}
+
+@media (max-width:800px){
+   .nav{
+      flex-direction: column-reverse;
+      align-items: center;
+   }
+   .nav_list{
+      width: 100%;
+   }
+
+}

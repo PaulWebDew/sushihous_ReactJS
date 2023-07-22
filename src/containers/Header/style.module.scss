@@ -1,0 +1,276 @@
+@import '../../styles/global';
+
+
+.info{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   color: $secondColor;
+   align-items: center;
+   a{
+      text-decoration: none;
+   }
+}
+
+.info_logo{
+   cursor: pointer;
+}
+
+.info_phone{
+   height: 2rem;
+   margin-top: 2rem;
+   @include adaptive-font(24,10);
+   a{text-decoration: none;
+      color: $secondColor;
+      transition: 0.3s;
+   &:hover{
+      color:$mainColor;
+   }}
+}
+
+.list{
+   display: flex;
+   flex-wrap: nowrap;
+   gap: 1.5rem;
+   justify-content:space-around;
+   @include adaptive-font(18,10);
+   color: rgba($secondColor, 0.7);
+li{
+   margin:0 5px;
+   cursor: pointer;
+   transition: 0.3s;
+   a{text-decoration: none;
+   color: inherit;}
+   &:hover{
+      color: $mainColor;
+   }
+}
+}
+
+.btnLogin{
+   border: none;
+   outline: none;
+   background: transparent;
+   color: $secondColor;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   transition: 0.3s;
+   svg{width: 1.5rem;
+   fill: $secondColor;
+transition: 0.3s;}
+   &:hover{
+      color: $mainColor;
+      svg{
+         fill: $mainColor;
+      }
+   }
+}
+
+.btnLoginOut{
+      border: none;
+      outline: none;
+      background: transparent;
+      color: $secondColor;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: 0.3s;
+      svg{width: 1.5rem;
+      fill: $secondColor;
+   transition: 0.3s;}
+      &:hover{
+         color: rgb(223, 29, 78);
+         svg{
+            fill: rgb(223, 29, 78);
+         }
+      }
+
+}
+
+.info_basket__button{
+   background-color: $mainColor;
+   border-radius: 15px;
+   border: none;
+   outline: none;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   transition: 0.3s;
+   cursor: pointer;
+      svg{width: 100%;
+          fill: rgba(0, 0, 0, 0.8);}
+   &:hover{
+   background-color: $secondColor;
+   }
+}
+
+.btnMenu{
+   display: none;
+}
+
+.callSvg{
+   display: none;
+}
+
+.info_basket__button_count{
+   @include adaptive-font(20,10);
+}
+
+@media (max-width:800px) {
+   .info_login__title,.info_basket__button_count,
+   .callNumber{
+      display: none;}
+   .callSvg{
+         display: block;
+         width: 1.2rem;
+         svg{
+            width: 100%;
+         fill: $mainColor;}
+      }
+   .info_phone{
+         height: 1.5rem;
+         margin-top: 0;
+   }
+   .btnLogin{
+      svg{
+         fill: $mainColor;
+      }
+   }
+}
+   @media (max-width:600px) {
+   .listWrapper{
+      position: absolute;
+      left: 50%;
+      top: 60px;
+      transform: translateX(-50%);
+      height: 12rem;
+      width: 51vw;
+      overflow-y: hidden;
+      pointer-events: none;
+      z-index: 2;
+   }
+   .visible .listWrapper{
+      pointer-events: all;
+   }
+   .hidden{
+      ul{
+      position: absolute;
+      top: 10px;
+      width: 50vw;
+      border: 1px solid rgba($mainColor, 0.5);
+      border-radius: 10px;
+      background-color: #0f0f0f ;
+      color: rgba($secondColor, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(-110%);
+      li{
+         margin: 5px auto;
+         @include adaptive-font(26,13);
+         background-color: $alterColor;
+         padding: 5px;
+         width: 80%;
+         border-radius: 5px;
+         text-align: center;
+      }
+      }
+   }
+.visible{
+   ul{
+      position: absolute;
+      top: 10px;
+      width: 50vw;
+      border: 1px solid rgba($mainColor, 0.5);
+      border-radius: 10px;
+      background-color: #0f0f0f ;
+      color: rgba($secondColor, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+      transform: translateY(0);
+      li{
+         margin: 5px auto;
+         @include adaptive-font(26,13);
+         background-color: $alterColor;
+         padding: 5px;
+         width: 80%;
+         border-radius: 5px;
+         text-align: center;
+      }
+   }
+}
+
+   .btnMenu{
+      display: flex;
+      justify-content: space-around;
+      gap: 5px;
+      align-items: center;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: $secondColor;
+      @include adaptive-font(24,16);
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition:all 0.2s ease-in-out;
+      -o-transition:all 0.2s ease-in-out;
+      -moz-transition:all 0.2s ease-in-out;
+      }
+   .btnMenu_burger{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 20px;
+      margin: 5px;
+      height: 2px;
+      background-color:rgba($secondColor, 0.8);
+      transition: all 0.3s ease-in-out;
+      &:before{
+      content: '';
+      position: absolute;
+      top: -8px;
+      display: block;
+      width: 25px;
+      min-height: 2px;
+      background-color:rgba($secondColor, 0.8);
+      transition: all 0.2s ease-in-out;
+      }
+      &:after{
+      content: '';
+      position: absolute;
+      top: 8px;
+      display: block;
+      width: 25px;
+      min-height: 2px;
+      background-color:rgba($secondColor, 0.8);
+      transition: all 0.2s ease-in-out;
+      }
+      &.btnMenu_burger__active{
+         height: 0;
+         &:before{
+            transform: rotate(45deg);
+            margin-top: 8px;
+         }
+         &:after{
+            transform: rotate(-45deg);
+            margin-top: -8px;
+         }
+      }
+   }
+}
+
+@media (max-width: 400px) {
+   .info_logo{
+    img{
+      width: 100px;
+    }
+   }
+}
+

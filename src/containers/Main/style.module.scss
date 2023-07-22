@@ -1,0 +1,34 @@
+@import '../../styles/global.scss';
+.main{
+   padding: 0 25px;
+   justify-content: center;
+   margin: 1rem auto;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(1, 1fr);
+   grid-column-gap: 15px;
+   grid-row-gap: 25px;
+}
+.categoryHeader{
+   color: $secondColor;
+   font-weight: bold;
+   @include adaptive-font(32,16);
+   margin: 20px 30px;
+}
+
+@media (max-width:1000px) {
+   .main{
+      grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+@media (max-width:650px) {
+   .main{
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+@media (max-width:400px) {
+   .main{
+      grid-template-columns: repeat(1, 1fr);
+   }
+}

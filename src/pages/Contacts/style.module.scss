@@ -1,0 +1,19 @@
+@import '../../styles/global.scss';
+
+.contacts{
+   color: $secondColor;
+   line-height: 1.3;
+   padding: 1rem;
+   a{
+      text-decoration: none;
+      color: $mainColor;
+   }
+   h1{
+      font-weight: bold;
+      margin: 2rem 0;
+      @include adaptive-font(40,24);
+   }
+   li{
+      margin-left: 1rem;
+   }
+}

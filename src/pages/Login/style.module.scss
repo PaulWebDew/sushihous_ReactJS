@@ -1,0 +1,25 @@
+@import '../../styles/global.scss';
+
+.form {
+   display: flex;
+   flex-direction: column;
+   max-width: 350px;
+   margin: 0 auto;
+   color: rgb(65, 67, 70);
+}
+
+.register{
+   color: rgba($secondColor, 0.8);
+   font-size: 12px;
+   text-align: center;
+   max-width:80vw ;
+   margin: 0 auto;
+& a{
+   text-decoration: none;
+   color: inherit;
+   margin-left: 10px;
+   &:hover{
+      color: rgba($secondColor, 1);
+   }
+}
+}

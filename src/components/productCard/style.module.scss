@@ -1,0 +1,72 @@
+@import '../../styles/global.scss';
+
+.sceleton{
+   // margin: 2rem;
+}
+
+.productCard_wrap{
+   flex: 250px;
+   max-width:450px;
+   border-radius: 1rem;
+   padding: 0.5rem;
+   background-color: black;
+   color: $secondColor;
+   cursor: pointer;
+   border: 2px solid transparent;
+   border-color: rgba($mainColor, 0);
+   transition: border-color 0.3s ease-in-out;
+   &:hover{
+      border-color: rgba($mainColor, 1);
+   }
+   a{
+      text-decoration: none;
+      color: $secondColor;
+   }
+}
+
+
+.productCard_info{
+width: 100%;
+padding: 1rem;
+box-sizing: border-box;
+}
+
+.productCard_img{
+   width: 100%;
+   img{width: 100%;}
+}
+.productCard_info__title{
+   font-weight: bold;
+   margin:0.5rem 0;
+}
+.productCard_info__weight{
+   @include adaptive-font(14,8);
+   color: rgba($secondColor, 0.7);
+   font-weight: 300;
+}
+
+.productCard_info__price{
+   margin-top: 30px;
+   @include adaptive-font(28,14);
+   font-weight: bold;
+}
+
+.product_button{
+   margin: 0 10px 0 auto;
+   height: 2rem;
+   background-color: $secondColor;
+   border-radius: 15px;
+   border: none;
+   outline: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: 0.3s;
+   @include adaptive-font(16,8);
+   cursor: pointer;
+      svg{width: 70%;
+          fill: rgba(0, 0, 0, 0.8);}
+   &:hover{
+   background-color: $mainColor;
+   }
+}

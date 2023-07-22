@@ -1,0 +1,62 @@
+@import '../../styles/global.scss';
+
+.pagination{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   button{
+      border: none;
+      outline: none;
+      background-color: transparent;
+      height: 24px;
+      color: $mainColor;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 24px;
+      cursor: pointer;
+         svg{
+            width: 20px;
+            height: 20px;
+            fill: rgba($mainColor, 0.7);
+            &:hover{
+               fill:$mainColor ;
+            }
+         }
+      }
+}
+
+.pagination_list{
+
+   display: flex;
+   justify-content: center;
+   width: auto;
+   margin: 10px;
+}
+
+.pagination_item{
+   margin: 5px;
+   border: 2px solid rgba($mainColor, 0.7);
+   border-radius: 50%;
+   display: inline-block;
+   color: rgba($secondColor, 0.7);
+   @include adaptive-font(22,10);
+   width: 24px;
+   height: 24px;
+   text-align: center;
+   line-height: 24px;
+   cursor: pointer;transition: all 0.2s ease-in-out;
+   -webkit-transition:all 0.2s ease-in-out;
+   -o-transition:all 0.2s ease-in-out;
+   -moz-transition:all 0.2s ease-in-out;
+   &:hover{
+      color: $mainColor;
+      border: 2px solid $mainColor;
+   }
+}
+
+.pagination_item__active{
+   opacity: 1;
+   color: $secondColor; 
+   background-color: rgba($mainColor, 0.8);
+   font-weight: bolder;
+}
