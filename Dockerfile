@@ -4,4 +4,5 @@ COPY package.json /app/package.json
 RUN npm install --only=prod
 COPY . /app
 RUN npm run build
-CMD ["npm", "start"]
+RUN npm install -g serve
+CMD ["serve", "-s", "build", "-l", "3000"]
