@@ -27,9 +27,9 @@ export const Footer:React.FC = () => {
             <div>
                <h2>Компания</h2>
                   <ul>
-                  <li><Link to={'/actions'}>Акции</Link></li>
-                   <li><Link to={'/delivery'}>Доставка</Link></li>
-                   <li><Link to={'/contacts'}>Контакты</Link></li>
+                  <li><Link to={'shop/actions'}>Акции</Link></li>
+                   <li><Link to={'shop/delivery'}>Доставка</Link></li>
+                   <li><Link to={'shop/contacts'}>Контакты</Link></li>
                   </ul>
             </div>
          </div>

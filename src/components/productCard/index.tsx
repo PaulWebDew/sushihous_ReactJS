@@ -39,7 +39,7 @@ const ProductCard: React.FC<IProductCard> =({ category,title,compos, UrlMin,UrlM
 
   return (
     <div className={style.productCard_wrap}>
-      <Link to={`/product/${_id}`}>
+      <Link to={`/shop/product/${_id}`}>
         <div className={style.productCard_img}>
           <img src={uploadUrl+UrlMin} alt="sushi" />
         </div>

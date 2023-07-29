@@ -21,8 +21,8 @@
    display: flex;
    justify-content: space-around;
    color: $secondColor;
-   font-weight: bold;
-   @include adaptive-font(22,10);
+   font-weight: bolder;
+   @include adaptive-font(22,12 );
    li{
    cursor: pointer;
    transition: all 0.2s ease-in-out;

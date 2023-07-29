@@ -57,17 +57,20 @@
    p{
       @include adaptive-font(20,14);
    }
+
    flex: 0.35;
    display: flex;
    align-items: center;
    gap: 0.5rem;
    justify-content: space-around;
+
    button{
       display: inline-block;
       background-color: transparent;
       border: none;
       outline: none;
       cursor: pointer;
+
       svg{
          stroke: rgba($mainColor, 0.7);
          width: 2rem;
@@ -80,6 +83,7 @@
             stroke: rgba($mainColor, 1);
          }
       }
+
       &:active{
          svg{
             stroke: $secondColor;
@@ -87,6 +91,7 @@
       }
    }
 }
+
 .basket_item__sum{
    text-align: center;
    flex: 0.35;
@@ -99,6 +104,7 @@
    margin-right: 15px;
    width: 1.5rem;
    cursor: pointer;
+
    svg{
       fill: $secondColor;
       transition: all 0.2s ease-in-out;
@@ -124,6 +130,7 @@
    justify-content: space-between;
    width: 90%;
    margin: 2rem auto;
+
    button{
       cursor: pointer;
       border: 1px solid rgba($mainColor, 0.7);
@@ -147,6 +154,7 @@
             color: $secondColor;
          }
       }
+
       a{
          text-decoration: none;
          color: $secondColor;
@@ -166,27 +174,31 @@
    }
    }
 }
+
 @media(max-width:600px){
    .basket_item{
       padding-bottom: 1rem;
    }
    .basket_item__card{
-   flex-direction: column;
+      flex-direction: column;
 }}
 
 @media(max-width:450px){
    .basket_item__count{
-   flex-direction: column;
+      flex-direction: column;
 }
-.basket_item__delete{
-   position: absolute;
-   top: 10px;
-   right: 0px;
+
+   .basket_item__delete{
+      position: absolute;
+      top: 10px;
+      right: 0px;
 }}
 
 @media(max-width:360px){
    .basket_item{
-   flex-direction: column;}
+      flex-direction: column;
+}
+
    .basket_item__count{
       flex-direction: row;
       margin: 1rem auto;

@@ -3,7 +3,7 @@
 .productCard{
    background-size: cover;
    background-position: center;
-   padding: 4rem 0;
+   padding: 4rem 1rem;
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -94,4 +94,8 @@ width: 30%;
     rgba(255,255,255,0.7) 90%,
      rgba(255,255,255,0.1) 100%);
 }
+}
+
+@media (max-width:600px){
+
 }

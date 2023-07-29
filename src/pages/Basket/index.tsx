@@ -38,14 +38,15 @@ const Basket:React.FC = () => {
          </div>
 
          {basketItems.length>0&&<div className={style.basket_footer}>
-            <button><Link to='/'>назад</Link></button>
+            <button><Link to='shop/'>назад</Link></button>
          <div className={style.total}>
             <div>Всего блюд: <span>{String(basketItemsCount)}</span></div>
             <div>Сумма заказа: <span>{basketSum} руб.</span> </div>
          </div>
             <button onClick={()=>dispatch(clearItems())}>Очистить корзину</button>
          </div>}
-         {basketItems.length === 0 && <div className={style.freeBasket}><p>Ваша корзина пуста! <br/> <Link to={'/'}>Перейти на главную страницу для заказа!</Link></p></div>}
+         {basketItems.length === 0 && <div className={style.freeBasket}><p>Ваша корзина пуста! <br/>
+         <Link to={'/shop/'}>Перейти на главную страницу для заказа!</Link></p></div>}
      </>
    );
 }

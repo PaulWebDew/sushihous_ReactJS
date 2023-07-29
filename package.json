@@ -2,7 +2,7 @@
   "name": "sushihous",
   "version": "0.1.0",
   "private": true,
-  "homepage": "sushihous/",
+  "homepage": "shop/",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.0.0",
     "@mui/icons-material": "^5.13.7",

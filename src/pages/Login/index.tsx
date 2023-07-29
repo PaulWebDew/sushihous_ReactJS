@@ -106,7 +106,7 @@ export const Login: React.FC = ()=> {
                  </InputAdornment>}
                  />
                </FormControl>
-               <span className={style.register}>Не зарегестрированы?<Link to={'/register'}>Создать акаунт</Link></span>
+               <span className={style.register}>Не зарегестрированы?<Link to={'shop/register'}>Создать акаунт</Link></span>
                <Button  sx={{m:2}} variant="text" type='submit'>Войти</Button>
 
             </form>

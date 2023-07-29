@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { setSelectedCategory } from '../../storage/slices/categorySlice';
 import { setCurrentPage } from '../../storage/slices/pagesSlice';
 import { useAppSelector, useAppDispatch } from '../../hooks';
@@ -17,14 +18,16 @@ type ICategoriesItem = {
 }
 
 const  Nav: React.FC<Inav> = ({ activeSearch }) => {
+  const dispatch = useAppDispatch();
+
   const categories = useAppSelector((state) => state.category.categories);
   const selectedCategory = useAppSelector((state) => state.category.selectedCategoryId);
-  const dispatch = useAppDispatch();
 
   const clickHandler = (categoryId:number) => {
     dispatch(setCurrentPage(1));
     dispatch(setSelectedCategory(categoryId));
   };
+
   return (
     <nav className={activeSearch ? style.nav + ' ' + style.activeSearch : style.nav}>
       <ul className={style.nav_list}>

@@ -31,19 +31,19 @@ function App() {
     <div className="appWrapper">
       <Header />
       <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="shop/" element={<Main />} />
+        <Route path="shop/login" element={<Login />} />
+        <Route path="shop/register" element={<Register />} />
         <Route path="*" element={<NotFounded404 />} />
-        <Route path="/product/:id" element={<FullProductCartd />} />
-        <Route path="/basket" element={
+        <Route path="shop/product/:id" element={<FullProductCartd />} />
+        <Route path="shop/basket" element={
         <Suspense fallback={<div style={{color:'white'}} >Идет загрузка...</div>}>
           <Basket />
         </Suspense>
         } />
-        <Route path="/actions" element={<Actions />} />
-        <Route path="/delivery" element={<Delivery />} />
-        <Route path="/contacts" element={<Contacts />} />
+        <Route path="shop/actions" element={<Actions />} />
+        <Route path="shop/delivery" element={<Delivery />} />
+        <Route path="shop/contacts" element={<Contacts />} />
       </Routes>
       <Footer/>
     </div>

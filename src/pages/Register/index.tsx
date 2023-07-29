@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Navigate, Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import {useAppDispatch, useAppSelector} from '../../hooks';
 import {useForm, SubmitHandler} from 'react-hook-form';
 import { fetchRegister } from '../../storage/slices/authSlice';

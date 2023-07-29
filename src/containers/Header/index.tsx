@@ -59,7 +59,7 @@ const clickLogout = ()=>{
   return (
     <>
       <div className={style.info} >
-        <Link to={'/'}>
+        <Link to={'shop/'}>
           <div className={style.info_logo}>
             <img src={logo} alt="logo" />
           </div>
@@ -96,19 +96,19 @@ const clickLogout = ()=>{
               }></div>
             <div>Menu</div>
           </button>
-          <nav className={visibleNav ? style.visible : style.hidden}>
+          <nav className={visibleNav ? style.visible+" "+style.listNav : style.hidden+" "+style.listNav}>
             <div className={style.listWrapper}>
               <ul className={style.list} ref={list}>
-                {location.pathname!=='/'&&<li><Link to={'/'}>На главную</Link></li>}
-                <li><Link to={'/actions'}>Акции</Link></li>
-                <li><Link to={'/delivery'}>Доставка</Link></li>
-                <li><Link to={'/contacts'}>Контакты</Link></li>
+                {location.pathname!=='/'&&<li><Link to={'shop/'}>На главную</Link></li>}
+                <li><Link to={'shop/actions'}>Акции</Link></li>
+                <li><Link to={'shop/delivery'}>Доставка</Link></li>
+                <li><Link to={'shop/contacts'}>Контакты</Link></li>
               </ul>
             </div>
           </nav>
         </div>
         {!isAuth&&<div className={style.info_login}>
-          <Link to={'/login'}>
+          <Link to={'shop/login'}>
             <button className={style.btnLogin}>
               <div className={style.info_login__image}>
                 <svg
@@ -147,9 +147,9 @@ const clickLogout = ()=>{
               </div>
             </button>
         </div>}
-        {location.pathname !== '/basket/' && (
+        {location.pathname !== 'shop/basket/' && (
           <div>
-            <Link to={'/basket/'}>
+            <Link to={'shop/basket/'}>
               <button className={style.info_basket__button}>
                 <div className={style.info_basket__button_image}>
                   <svg
@@ -166,14 +166,15 @@ const clickLogout = ()=>{
                   </svg>
                 </div>
                 <div className={style.info_basket__button_count}>
-                  {basketItemsCount} / {basketSum}p.
+                    {basketSum}p.
                 </div>
+                {basketItemsCount>0 && <div className={style.button_circle}>{basketItemsCount}</div>}
               </button>
             </Link>
           </div>
         )}
       </div>
-      {location.pathname === '/' && <Search />}
+      {location.pathname === '/shop/' && <Search />}
     </>
   );
 }

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import {useAppDispatch } from '../../hooks';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 
+import {useAppDispatch } from '../../hooks';
 import { page_goods, uploadUrl } from '../../config/connectDB';
 import { addItem } from '../../storage/slices/basketSlice';
 
@@ -21,12 +21,12 @@ interface BasketItem {
   count:number
 }
 
-
-
 const FullProductCartd: React.FC =()  =>{
+
   const dispatch = useAppDispatch();
 
   const [product, setProduct] = useState<BasketItem>();
+
   const { id } = useParams();
 
   const addToBasket = () => {
@@ -34,6 +34,7 @@ const FullProductCartd: React.FC =()  =>{
   };
 
   useEffect(() => {
+    // получаем данные одного продукта и сетим в стейт
     const getOneProduct = async () => {
       try {
         const res = await axios.get<BasketItem>(`${page_goods}/${id}`);
@@ -44,11 +45,13 @@ const FullProductCartd: React.FC =()  =>{
     };
     getOneProduct();
   }, [id]);
+
   if(!product)return <>Загрузка...</>
 
   return (
     <div className={style.productCard} style={{backgroundImage:`url(${uploadUrl}${product.UrlMax})`}}>
       <div className={style.productCard_wrap}>
+
         <div className={style.productCard_info}>
           <div className={style.productCard_info__title}>
             <p>{product.title}</p>
@@ -57,6 +60,7 @@ const FullProductCartd: React.FC =()  =>{
           <div className={style.productCard_info__compos}>{product.compos} </div>
           <div className={style.productCard_info__price}>{String(product.price)} p.</div>
         </div>
+
         <div>
           <button className={style.product_button} onClick={addToBasket}>
             <div className={style.info_basket__button_image}>
@@ -76,8 +80,11 @@ const FullProductCartd: React.FC =()  =>{
             <div className={style.info_basket__button_count}>В корзину</div>
           </button>
         </div>
+
       </div>
-      <button className={style.btn_back}><Link to={'/'}>назад</Link></button>
+
+      <button className={style.btn_back}><Link to={'shop/'}>назад</Link></button>
+
     </div>
   );
 }

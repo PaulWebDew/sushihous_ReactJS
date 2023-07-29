@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/sushihous/static/css/main.50a84f14.css",
-    "main.js": "/sushihous/static/js/main.ac711e05.js",
-    "Basket.css": "/sushihous/static/css/Basket.78976cbb.chunk.css",
-    "Basket.js": "/sushihous/static/js/Basket.cdb6eb33.chunk.js",
-    "static/media/pngwing.com.png": "/sushihous/static/media/pngwing.com.2b7efcc47cbdb487c56e.png",
-    "static/media/404.jpg": "/sushihous/static/media/404.bff7ed82f952f9c35bbc.jpg",
-    "static/media/action1.jpg": "/sushihous/static/media/action1.f66a615641a78d008fb1.jpg",
-    "static/media/action2.jpg": "/sushihous/static/media/action2.86e201d925c56a21fa2a.jpg",
-    "static/media/action4.jpg": "/sushihous/static/media/action4.aa4fef5bcf1763789477.jpg",
-    "static/media/action3.webp": "/sushihous/static/media/action3.b7648b9c6f9127a65e6c.webp",
-    "static/media/logo-sushistore.svg": "/sushihous/static/media/logo-sushistore.eb41e823e0e3fd6488637e8e578f1f29.svg",
-    "index.html": "/sushihous/index.html",
-    "main.50a84f14.css.map": "/sushihous/static/css/main.50a84f14.css.map",
-    "main.ac711e05.js.map": "/sushihous/static/js/main.ac711e05.js.map",
-    "Basket.78976cbb.chunk.css.map": "/sushihous/static/css/Basket.78976cbb.chunk.css.map",
-    "Basket.cdb6eb33.chunk.js.map": "/sushihous/static/js/Basket.cdb6eb33.chunk.js.map"
+    "main.css": "/shop/static/css/main.caaf245f.css",
+    "main.js": "/shop/static/js/main.b7716606.js",
+    "Basket.css": "/shop/static/css/Basket.7660b9a6.chunk.css",
+    "Basket.js": "/shop/static/js/Basket.cdb6eb33.chunk.js",
+    "static/media/pngwing.com.png": "/shop/static/media/pngwing.com.2b7efcc47cbdb487c56e.png",
+    "static/media/404.jpg": "/shop/static/media/404.bff7ed82f952f9c35bbc.jpg",
+    "static/media/action1.jpg": "/shop/static/media/action1.f66a615641a78d008fb1.jpg",
+    "static/media/action2.jpg": "/shop/static/media/action2.86e201d925c56a21fa2a.jpg",
+    "static/media/action4.jpg": "/shop/static/media/action4.aa4fef5bcf1763789477.jpg",
+    "static/media/action3.webp": "/shop/static/media/action3.b7648b9c6f9127a65e6c.webp",
+    "static/media/logo-sushistore.svg": "/shop/static/media/logo-sushistore.eb41e823e0e3fd6488637e8e578f1f29.svg",
+    "index.html": "/shop/index.html",
+    "main.caaf245f.css.map": "/shop/static/css/main.caaf245f.css.map",
+    "main.b7716606.js.map": "/shop/static/js/main.b7716606.js.map",
+    "Basket.7660b9a6.chunk.css.map": "/shop/static/css/Basket.7660b9a6.chunk.css.map",
+    "Basket.cdb6eb33.chunk.js.map": "/shop/static/js/Basket.cdb6eb33.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.50a84f14.css",
-    "static/js/main.ac711e05.js"
+    "static/css/main.caaf245f.css",
+    "static/js/main.b7716606.js"
   ]
 }
